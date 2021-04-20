@@ -1,1 +1,1 @@
-The Interace internship portal
+The Internace internship portal
