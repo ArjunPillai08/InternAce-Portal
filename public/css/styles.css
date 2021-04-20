@@ -207,7 +207,7 @@ legend {
   width: 100%;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
-  color: #inherit;
+  color: inherit;
   font-size: 20px;
   line-height: inherit;
 }
@@ -1662,7 +1662,7 @@ html[xmlns] .slides {
   box-shadow: 0px 3px 7px 0px rgba(77, 77,77, 0.4);
 }
 .header-search-bar .bootstrap-select .dropdown-toggle {
-  width: 100%:
+  width: 100%;
   border: 1px solid #ccc;
 }
 .header-search-bar form > .basic-form {
@@ -6583,9 +6583,9 @@ ul.client-applicants-tab li  a:hover,ul.client-applicants-tab li  a:focus {
   margin-top: 0;
 }
 .editing-link,.clients-list,.assigned-job-list {
+  ccmin-width: 720px;
 }
-,ccmin-width: 720px;
-}
+
 
 
 .our-agents-content .agent-single {
