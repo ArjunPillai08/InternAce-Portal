@@ -36,6 +36,7 @@ Table Of  Content
 ==============================================
 ---------------------------------------------- */
 
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700&subset=latin-ext');
 
 /* General */
 body {
@@ -1668,14 +1669,14 @@ html[xmlns] .slides {
 .header-search-bar form > .basic-form {
   position: relative;
   margin-left: -15px;
-  padding-left: 60px;
+  padding-left: 0px;
 }
 .header-search-bar form > .basic-form > div {
   float: left;
   padding-left: 15px;
 }
 .header-search-bar .hsb-input-1 {
-  width: 35%;
+  width: 23%;
 }
 .header-search-bar .hsb-text-1 {
   width: 3%;
@@ -1686,11 +1687,11 @@ html[xmlns] .slides {
   padding-left: 0;
 }
 .header-search-bar .hsb-container {
-  width: 52%;
+  width: 64%;
 }
 .header-search-bar .hsb-container .hsb-input-2,.header-search-bar .hsb-container .hsb-select {
   float: left;
-  width: 50%;
+  width: 33%;
 }
 .header-search-bar .hsb-container .hsb-select {
   padding-left: 15px;
@@ -6288,7 +6289,7 @@ ul.client-applicants-tab li  a:hover,ul.client-applicants-tab li  a:focus {
 }
 .applicants-content .language-print {
   position: relative;
-  padding-left: 115px;
+  /* padding-left: 115px; */
 }
 .applicants-content .language-print li.star-rating {
   font-size: 48px;
@@ -6783,4 +6784,112 @@ ul.client-applicants-tab li  a:hover,ul.client-applicants-tab li  a:focus {
   line-height: 26px;
   margin-top: 15px;
   text-transform: uppercase;
+}
+
+
+.dot {
+  box-sizing: border-box;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: .125rem solid;
+  display: inline-block;
+}
+
+.dot--full { background-color: green; }
+
+
+#posted-date {
+  position: absolute;
+  top: -16%;
+  right: 0%;
+}
+
+#position {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.profile-card-loc {
+  /* display: flex; */
+  font-size: 15px;
+  font-weight: 700;
+  color: #324e63;
+}
+.profile-card-loc__icon {
+  display: inline-flex;
+  font-size: 27px;
+  margin-right: 10px;
+}
+
+#location-icon {
+  font-size:24px;
+  display: inline-block;
+  margin: 10px 10px 15px 0px;
+}
+
+/* status */
+
+.status {
+  position: relative;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  /* margin: 10px; */
+  margin: 10px 1px -1px 16px;
+}
+.status.online, .status.online:before {
+  background: #72ff7d;
+}
+.status.offline, .status.offline:before {
+  background: #ff4242;
+}
+.status.invisible, .status.invisible:before {
+  background: #42e5ff;
+}
+.status.idle, .status.idle:before {
+  background: #ffda72;
+}
+.status:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite ease-in;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* status end */
+
+#location-name {
+  color: #2a356f;
+}
+
+.active-color {
+  color: #3d7f35;
+}
+
+.na-color {
+  color: #ea4737;
+}
+
+#no-results {
+  text-align: center;
+  font-size: 21px;
+  color: red;
 }

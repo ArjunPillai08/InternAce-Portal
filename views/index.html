@@ -240,83 +240,50 @@
           </div>
           <div class="container">
             <div class="search-holder">
-              <h1>Interace</h1>
+              <h1>Internace</h1>
               <h2>Your go-to for internships</h2>
 
               <div id="header-search">
                 <div class="header-search-bar">
                   <div class="">
                     <form>
-                      <div class="basic-form clearfix"> <a href="#" class="toggle"><span></span></a>
+                      <div class="basic-form clearfix"> 
+                        <!-- <a href="#" class="toggle"><span></span></a> -->
                         <div class="hsb-input-1">
-                          <input type="text" class="form-control" placeholder="Keywords">
+                          <input type="text" class="form-control" id='position' placeholder="Keywords">
                         </div>
                         <div class="hsb-text-1">in</div>
                         <div class="hsb-container">
-                          <div class="hsb-input-2">
+                          <div class="hsb-select">
+                            <select class="form-control" id="industry">
+                              <!-- <option selected value="0">Select Industry</option> -->
+                              <!-- <option value="Any">Any</option>
+                              <option value="Entertainment">Entertainment</option>
+                              <option value="Retail">Retail</option> -->
+                            </select>
+                          </div>
+                          <!-- <div class="hsb-input-2">
                             <input type="text" class="form-control" placeholder="Location">
+                          </div> -->
+                          <div class="hsb-select">
+                            <select class="form-control" id="remote">
+                              <option selected value="0">Select Remote Work</option>
+                              <option value="All">All</option>
+                              <option value="Yes">Yes</option>
+                              <option value="No">No</option>
+                            </select>
                           </div>
                           <div class="hsb-select">
-                            <select class="form-control">
-                              <option value="0">Select Category</option>
-                              <option value="">Banking</option>
-                              <option value="">Finance</option>
-                              <option value="">IT</option>
-                              <option value="">Specialists</option>
+                            <select class="form-control" id="paid">
+                              <option selected value="0">Select Pay</option>
+                              <option value="All">All</option>
+                              <option value="Yes">Yes</option>
+                              <option value="No">No</option>
                             </select>
                           </div>
                         </div>
                         <div class="hsb-submit">
-                          <button type="submit" class="btn btn-default btn-block"><i class="fa fa-search"></i><span>Search</span></button>
-                        </div>
-                      </div>
-                      <div class="advanced-form">
-                        <div class="">
-                          <div class="row">
-                            <label class="col-md-3">Distance</label>
-                            <div class="col-md-9">
-                              <div class="range-slider">
-                                <div class="slider" data-min="1" data-max="200" data-current="100"></div>
-                                <div class="last-value"><span>100</span> km</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <label class="col-md-3">Rating</label>
-                            <div class="col-md-9">
-                              <div class="range-slider">
-                                <div class="slider" data-min="1" data-max="100" data-current="20"></div>
-                                <div class="last-value">&gt; <span>20</span> %</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <label class="col-md-3">Days Published</label>
-                            <div class="col-md-9">
-                              <div class="range-slider">
-                                <div class="slider" data-min="1" data-max="60" data-current="30"></div>
-                                <div class="last-value">&lt; <span>30</span></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <label class="col-md-3">Location</label>
-                            <div class="col-md-9">
-                              <input type="text" class="form-control" placeholder="Switzerland">
-                            </div>
-                          </div>
-                          <div class="row">
-                            <label class="col-md-3">Category</label>
-                            <div class="col-md-9">
-                              <select class="form-control">
-                                <option value="">Select Category</option>
-                                <option value="">Banking</option>
-                                <option value="">Finance</option>
-                                <option value="">IT</option>
-                                <option value="">Specialists</option>
-                              </select>
-                            </div>
-                          </div>
+                          <button type="submit" class="btn btn-default btn-block" onclick="getInternJobs(event)"><i class="fa fa-search"></i><span>Search</span></button>
                         </div>
                       </div>
                     </form>
@@ -366,5 +333,7 @@
       <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
       <script src="js/owl.carousel.min.js"></script>
       <script src="js/scripts.js"></script>
+      <script src="js/config.js"></script>
+      <script src="js/searchJobs.js"></script>
     </body>
   </html>
