@@ -499,7 +499,7 @@ input[type="submit"].btn-block,input[type="reset"].btn-block,input[type="button"
 .header-page-title {
   position: relative;
   width: 100%;
-  background: url('../img/title-bg.png') center center no-repeat;
+  background: url('../img/title-bg.jpg') center center no-repeat;
   background-size: cover;
   color: #ffffff;
   _border-bottom: 3px solid #346abb;
