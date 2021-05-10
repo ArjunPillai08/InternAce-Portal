@@ -44,105 +44,105 @@ $('.responsive-tabs').responsiveTabs();
 
 // UOU Selects
   // ---------------------------------------------------------
-  $.fn.uouCustomSelect = function () {
-    var $select = $(this);
+  // $.fn.uouCustomSelect = function () {
+  //   var $select = $(this);
 
-    $select.wrap('<div class="uou-custom-select"></div>');
+  //   $select.wrap('<div class="uou-custom-select"></div>');
 
-    var $container = $select.parent('.uou-custom-select');
+  //   var $container = $select.parent('.uou-custom-select');
 
-    $container.append('<ul class="select-clone"></ul>');
+  //   $container.append('<ul class="select-clone"></ul>');
 
-    var $list = $container.children('.select-clone'),
-      placeholder = $select.data('placeholder') ? $select.data('placeholder') : $select.find('option:eq(0)').text();
+  //   var $list = $container.children('.select-clone'),
+  //     placeholder = $select.data('placeholder') ? $select.data('placeholder') : $select.find('option:eq(0)').text();
 
-    $('<input class="value-holder" type="text" disabled="disabled" placeholder="' + placeholder + '"><div class="trigger"><i class="fa fa-caret-down"></i></div>').insertBefore($list);
+  //   $('<input class="value-holder" type="text" disabled="disabled" placeholder="' + placeholder + '"><div class="trigger"><i class="fa fa-caret-down"></i></div>').insertBefore($list);
 
-    var $valueHolder = $container.children('.value-holder');
+  //   var $valueHolder = $container.children('.value-holder');
 
-    // Create clone list
-    $select.find('option').each(function () {
-      var $this = $(this);
+  //   // Create clone list
+  //   $select.find('option').each(function () {
+  //     var $this = $(this);
 
-      $list.append('<li data-value="' + $this.val() + '">' + $this.text() + '</li>');
-    });
+  //     $list.append('<li data-value="' + $this.val() + '">' + $this.text() + '</li>');
+  //   });
 
-    // Toggle list
-    $container.on('click', function () {
-      $container.toggleClass('active');
-      $list.slideToggle(250);
-    });
+  //   // Toggle list
+  //   $container.on('click', function () {
+  //     $container.toggleClass('active');
+  //     $list.slideToggle(250);
+  //   });
 
-    // Option Select
-    $list.children('li').on('click', function () {
-      var $this = $(this);
+  //   // Option Select
+  //   $list.children('li').on('click', function () {
+  //     var $this = $(this);
 
-      $valueHolder.val($this.text());
-      $select.find('option[value="' + $this.data('value') + '"]').prop('selected', true);
-    });
+  //     $valueHolder.val($this.text());
+  //     $select.find('option[value="' + $this.data('value') + '"]').prop('selected', true);
+  //   });
 
-    // Hide
-    $container.on('clickoutside touchendoutside', function () {
-      if (!dragging) {
-        $container.removeClass('active');
-        $list.slideUp(250);
-      }
-    });
+  //   // Hide
+  //   $container.on('clickoutside touchendoutside', function () {
+  //     if (!dragging) {
+  //       $container.removeClass('active');
+  //       $list.slideUp(250);
+  //     }
+  //   });
 
-    // Links
-    if ($select.hasClass('links')) {
-      $select.on('change', function () {
-        window.location.href = select.val();
-      });
-    }
+  //   // Links
+  //   if ($select.hasClass('links')) {
+  //     $select.on('change', function () {
+  //       window.location.href = select.val();
+  //     });
+  //   }
 
-    $select.on('change', function () {
-      cosole.log(chnaged);
-      cosole.log($(this).val());
-    });
-  };
+  //   $select.on('change', function () {
+  //     cosole.log(chnaged);
+  //     cosole.log($(this).val());
+  //   });
+  // };
 
-  $('select').each(function () {
-    $(this).uouCustomSelect();
-  });
+  // $('select').each(function () {
+  //   $(this).uouCustomSelect();
+  // });
 
-  // Delete tables day
-  var $DeleteTable = $('.operating-table .table-content .table-content-single .delete a');
+  // // Delete tables day
+  // var $DeleteTable = $('.operating-table .table-content .table-content-single .delete a');
 
-  $DeleteTable.on('click',function(e){
-    e.preventDefault()
-    $(this).parent().parent().hide();
-  });
+  // $DeleteTable.on('click',function(e){
+  //   e.preventDefault()
+  //   $(this).parent().parent().hide();
+  // });
 
 
-  // custom radio button input
+  // // custom radio button input
 
-  $.fn.uouRadioInput = function(){
+  // $.fn.uouRadioInput = function(){
 
-    var self = $(this),
-    input = self.find( 'input' ),
-    group = input.attr( 'name' );
+  //   var self = $(this),
+  //   input = self.find( 'input' ),
+  //   group = input.attr( 'name' );
 
-    // INITIAL STATE
-    if ( input.is( ':checked' ) ) {
-      self.addClass( 'active' );
-    }
+  //   // INITIAL STATE
+  //   if ( input.is( ':checked' ) ) {
+  //     self.addClass( 'active' );
+  //   }
 
-    // CHANGE STATE
-    input.change(function(){
-      if ( group ) {
-        $( '.radio-input input[name="' + group + '"]' ).parent().removeClass( 'active' );
-      }
-      if ( input.is( ':checked' ) ) {
-        self.addClass( 'active' );
-      }
-    });
+  //   // CHANGE STATE
+  //   input.change(function(){
+  //     if ( group ) {
+  //       $( '.radio-input input[name="' + group + '"]' ).parent().removeClass( 'active' );
+  //     }
+  //     if ( input.is( ':checked' ) ) {
+  //       self.addClass( 'active' );
+  //     }
+  //   });
 
-  };
+  // };
 
-  $( '.radio-input' ).each(function(){
-    $(this).uouRadioInput();
-  });
+  // $( '.radio-input' ).each(function(){
+  //   $(this).uouRadioInput();
+  // });
 
 
 
@@ -318,16 +318,17 @@ $('.responsive-tabs').responsiveTabs();
       //$( "#datepicker-end" ).datepicker();
       /*$( "#datepicker-entry" ).datepicker();*/
 
-      $('.toggle-content-client').hide();
+      // $('.toggle-content-client').hide();
 
 
-      $('.toggle-details a').on('click', function(e){
-        e.preventDefault();
+      // $('.toggle-details a').on('click', function(e){
+      //   e.preventDefault();
 
-        $(this).parent().siblings('.toggle-content-client').slideToggle(350);
-        $(this).parent().toggleClass('active');
+      //   // $(this).parent().siblings('.toggle-content-client').slideToggle(350);
+      //   // $(this).parent().toggleClass('active');
+      //   // console.log($(this).parent());
 
-      });
+      // });
 
 
 
@@ -622,7 +623,9 @@ if ($('#find-job-map-tab').length > 0) {
 $('.candidates-item').each(function () {
   var $item = $(this),
     $content = $item.find('.content'),
-    $toggle = $item.find('.top-btns .toggle');
+    $toggle = $item.find('.top-btn btn-toggles .toggle');
+
+   
 
   $toggle.on('click', function (event) {
     event.preventDefault();
@@ -640,7 +643,7 @@ $('.candidates-item').each(function () {
 
   $item.find('.read-more').on('click', function (event) {
     event.preventDefault();
-
+    console.log($item);
     $content.slideDown();
     $item.addClass('active');
     $toggle.removeClass('fa-plus').addClass('fa-minus');
@@ -674,90 +677,90 @@ if ($.fn.slider) {
 
 // Jobs Filters List
 // ---------------------------------------------------------
-$('.jobs-filter-widget .filter-list, .compare-price-filter-widget .filter-list').each(function () {
-  var $this = $(this),
-    $toggle = $this.siblings('.toggle');
+// $('.jobs-filter-widget .filter-list, .compare-price-filter-widget .filter-list').each(function () {
+//   var $this = $(this),
+//     $toggle = $this.siblings('.toggle');
 
-  $this.find('li').each(function () {
-    var $this = $(this);
+//   $this.find('li').each(function () {
+//     var $this = $(this);
 
-    if ($this.children('ul').length > 0) {
-      $this.addClass('has-submenu');
-    }
-  });
+//     if ($this.children('ul').length > 0) {
+//       $this.addClass('has-submenu');
+//     }
+//   });
 
-  $toggle.on('click', function (event) {
-    event.preventDefault();
+//   $toggle.on('click', function (event) {
+//     event.preventDefault();
 
-    $this.slideToggle();
-    $toggle.toggleClass('active');
-  });
+//     $this.slideToggle();
+//     $toggle.toggleClass('active');
+//   });
 
-  $this.find('.has-submenu > a').on('click', function (event) {
-    event.preventDefault();
+//   $this.find('.has-submenu > a').on('click', function (event) {
+//     event.preventDefault();
 
-    var $thisLi = $(this).parent('li'),
-      $thisUl = $thisLi.children('ul');
+//     var $thisLi = $(this).parent('li'),
+//       $thisUl = $thisLi.children('ul');
 
-    if (!$thisLi.hasClass('active')) {
-      $thisLi.addClass('active');
-      $thisUl.slideDown();
-    } else  {
-      $thisLi.removeClass('active');
-      $thisUl.slideUp().find('.has-submenu').removeClass('active').children('ul').slideUp();
-    }
-  });
-});
+//     if (!$thisLi.hasClass('active')) {
+//       $thisLi.addClass('active');
+//       $thisUl.slideDown();
+//     } else  {
+//       $thisLi.removeClass('active');
+//       $thisUl.slideUp().find('.has-submenu').removeClass('active').children('ul').slideUp();
+//     }
+//   });
+// });
 
 
 // Jobs Views
 // ---------------------------------------------------------
-$('.jobs-view-toggle').each(function () {
-  var $this = $(this),
-    $items = $this.closest('.page-content').find('.jobs-item');
+// $('.jobs-view-toggle').each(function () {
+//   var $this = $(this),
+//     $items = $this.closest('.page-content').find('.jobs-item');
 
-  $this.find('.btn').on('click', function (event) {
-    event.preventDefault();
+//   $this.find('.btn').on('click', function (event) {
+//     event.preventDefault();
 
-    var $this = $(this),
-      layout = $this.data('layout');
+//     var $this = $(this),
+//       layout = $this.data('layout');
 
-    if (!$this.hasClass('active')) {
-      if (layout == 'with-thumb') {
-        $items.removeClass('compact').addClass('with-thumb');
-      } else if (layout == 'compact') {
-        $items.removeClass('with-thumb').addClass('compact');
-      } else {
-        $items.removeClass('with-thumb compact');
-      }
+//     if (!$this.hasClass('active')) {
+//       if (layout == 'with-thumb') {
+//         $items.removeClass('compact').addClass('with-thumb');
+//       } else if (layout == 'compact') {
+//         $items.removeClass('with-thumb').addClass('compact');
+//       } else {
+//         $items.removeClass('with-thumb compact');
+//       }
 
-      $this.addClass('active').parent('li').siblings('li').children('a').removeClass('active');
-    }
-  });
-});
+//       $this.addClass('active').parent('li').siblings('li').children('a').removeClass('active');
+//     }
+//   });
+// });
 
 // Search/Filter Toggle
 // ---------------------------------------------------------
-$('.jobs-search-widget, .jobs-filter-widget').each(function () {
-  var $this = $(this);
+// $('.jobs-search-widget, .jobs-filter-widget').each(function () {
+//   var $this = $(this);
 
-  $this.find('.widget-title').on('click', function (event) {
-    if (XS.matches) {
-      event.preventDefault();
+//   $this.find('.widget-title').on('click', function (event) {
+//     if (XS.matches) {
+//       event.preventDefault();
 
-      $this.find('.widget-content').slideToggle();
-    }
-  });
-});
+//       $this.find('.widget-content').slideToggle();
+//     }
+//   });
+// });
 
-function searchFilterToggle(XS) {
-  if (!XS.matches) {
-    $('.jobs-search-widget .widget-content, .jobs-filter-widget .widget-content').removeAttr('style');
-  }
-}
+// function searchFilterToggle(XS) {
+//   if (!XS.matches) {
+//     $('.jobs-search-widget .widget-content, .jobs-filter-widget .widget-content').removeAttr('style');
+//   }
+// }
 
-searchFilterToggle(XS);
-XS.addListener(searchFilterToggle);
+// searchFilterToggle(XS);
+// XS.addListener(searchFilterToggle);
 
 
 
