@@ -6108,6 +6108,10 @@ div.tagsinput span.tag a {
   padding: 20px;
   padding-bottom: 10px;
   margin-bottom: 20px;
+<<<<<<< HEAD
+=======
+  border-radius: 25px;
+>>>>>>> d507997f24f3f47a904a0d4b5472a8a45b4aa452
 }
 .client-profile-deatils {
   position: relative;
