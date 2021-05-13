@@ -494,17 +494,10 @@ if ($('#contact-page-map').length > 0) {
     },
     locations: [
       {
-        lat: -37.817314,
-        lon: 144.95543099999998,
+        lat: 40.8641842,
+        lon: -74.809082,
         title: 'Headquarters',
         html: '<strong>Headquarters</strong> <br> 121 King Street, Melbourne <br> Victoria 3000 Australia <br> Envato Pty Ltd',
-        icon: marker
-      },
-      {
-        lat: -37.83527632292268,
-        lon: 145.01455307006836,
-        title: 'Secondary Office',
-        html: '<strong>Secondary Office</strong> <br> 47 Queen Street, Melbourne <br> Victoria 3000 Australia <br> Envato Pty Ltd',
         icon: marker
       }
     ]
