@@ -43,7 +43,7 @@ body {
   background: #fff;
   color: #262626;
   font-size: 14px;
-  font-family: 'Raleway', sans-serif;
+  font-family: Copperplate, sans-serif;
   line-height: 20px;
   cursor: default;
   background: #262626;
@@ -61,7 +61,7 @@ body {
   _padding-bottom: 60px;
 }
 a {
-  color: #346abb;
+  color: #000000;
   text-decoration: none;
   cursor: pointer;
   -webkit-transition: all 0.25s ease-out;
@@ -392,7 +392,7 @@ input[type="submit"].btn-block,input[type="reset"].btn-block,input[type="button"
 }
 
 .btn-default {
-  background: #346abb;
+  background: #000000;
   color: #ffffff;
 }
 .btn-default:hover,.btn-default:focus,.btn-default:active,.btn-default.active {
@@ -6108,10 +6108,7 @@ div.tagsinput span.tag a {
   padding: 20px;
   padding-bottom: 10px;
   margin-bottom: 20px;
-<<<<<<< HEAD
-=======
   border-radius: 25px;
->>>>>>> d507997f24f3f47a904a0d4b5472a8a45b4aa452
 }
 .client-profile-deatils {
   position: relative;
